@@ -1,3 +1,4 @@
+import 'package:eutrampoadmin/screens/home_screen.dart';
 import 'package:eutrampoadmin/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -9,8 +10,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'EuTrampo Admin',
-      home: LoginScreen(),
+      home: HomeScreen(),
     );
   }
 }

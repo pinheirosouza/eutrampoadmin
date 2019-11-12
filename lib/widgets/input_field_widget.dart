@@ -14,22 +14,22 @@ class InputField extends StatelessWidget {
     return StreamBuilder<String>(
       stream: stream, 
       builder: (context, snapshot) {
-         return TextFormField(
-           style: TextStyle(color: Color.fromARGB(255, 253,236,8)),
-           cursorColor: Color.fromARGB(255, 253,236,8),
-           onChanged: onChanged,
-            autofocus: true,
-            obscureText: obscure,
-            decoration: InputDecoration(
-              focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.white),
-              ),  
-              labelText: hint,
-              labelStyle: TextStyle(color: Colors.white),
-              errorText: snapshot.hasError ? snapshot.error : null,
-            ),
-          );
+        return TextFormField(
+          style: TextStyle(color: Color.fromARGB(255, 253,236,8)),
+          cursorColor: Color.fromARGB(255, 253,236,8),
+          onChanged: onChanged,
+          autofocus: true,
+          obscureText: obscure,
+          decoration: InputDecoration(
+            focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: Colors.white),
+            ),  
+            labelText: hint,
+            labelStyle: TextStyle(color: Colors.white),
+            errorText: snapshot.hasError ? snapshot.error : null,
+          ),
+        );
       }
     );
-    }
+  }
 }
