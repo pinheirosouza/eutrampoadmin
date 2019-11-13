@@ -35,7 +35,7 @@ class DashboardTab extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(50, 50, 0, 0),
               child: InfoCard(iconBgColor: Color.fromARGB(255,102,46,147), 
               cardTitle: "Renda gerada", 
-              mainText: "Hoje", 
+              mainText: "Mês", 
               subText: "R\$ 2800,00", 
               icon: Icons.monetization_on,),
             )

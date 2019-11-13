@@ -21,7 +21,7 @@ class Comment {
 
 List<Comment> commentList = [
   Comment(
-    name: "James Anderson",
+    name: "Lorem Ipsum is simply",
     status: Status.Pending,
     image: "images/1.jpg",
     color: Colors.blue,

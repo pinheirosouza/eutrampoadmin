@@ -5,46 +5,42 @@ enum Status { Pending, Approved, Rejected }
 class Services {
   String name;
   String comment;
-  Status status;
   String pos;
-  Color color;
-  String date;
+  String cliques;
 
   Services(
       {this.name,
       this.comment,
-      this.status,
+      this.cliques,
       this.pos,
-      this.color,
-      this.date});
+      });
 }
 
 List<Services> servicesList = [
   Services(
-    name: "James Anderson",
-    status: Status.Pending,
+    name: "Faxina",
     pos: "1",
-    color: Colors.blue,
-    date: "May 19, 2019",
-    comment:
-        "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has beenorem Ipsum is simply dummy text of the printing and type setting ",
+    cliques: "41"
   ),
   Services(
-    name: "Michael Jorden",
-    status: Status.Approved,
+    name: "Jardinagem",
     pos: "2",
-    date: "May 19, 2019",
-    color: Colors.green,
-    comment:
-        "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has beenorem Ipsum is simply dummy text of the printing and type setting ",
+    cliques: "32"
   ),
   Services(
-    name: "Johnathan Doeting",
-    status: Status.Rejected,
-    color: Colors.red,
+    name: "Eletricista",
     pos: "3",
-    date: "May 19, 2019",
-    comment:
-        "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has beenorem Ipsum is simply dummy text of the printing and type setting ",
+    cliques: "29"
   ),
+  Services(
+    name: "Marceneiro",
+    pos: "4",
+    cliques: "20"
+  ),
+  Services(
+    name: "Hidráulico",
+    pos: "5",
+    cliques: "8"
+  ),
+  
 ];

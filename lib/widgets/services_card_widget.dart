@@ -27,7 +27,7 @@ class ServicesCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              "Latest Comments on users from Material",
+              "Serviços mais contratados pelos clientes inscritos em nossa plataforma",
               style: TextStyle(fontSize: 13, color: Colors.grey),
             ),
             SizedBox(height: 20),
@@ -37,44 +37,19 @@ class ServicesCard extends StatelessWidget {
                 itemCount: servicesList.length,
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: const EdgeInsets.only(bottom: 8.0),
+                    padding: const EdgeInsets.only(bottom: 4),
                     child: ListTile(
                       dense: true,
+
                       leading: Text(servicesList[index].pos),
                       title: Text(
                         servicesList[index].name,
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      subtitle: Padding(
-                        padding: EdgeInsets.only(top: 8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "${servicesList[index].comment}",
-                              style: TextStyle(fontSize: 12),
-                            ),
-                            SizedBox(height: 5),
-                            Row(
-                              children: <Widget>[
-                                Text(
-                                  "${servicesList[index].date}",
-                                  style: TextStyle(fontSize: 12),
-                                ),
-                                SizedBox(width: 10),
-                                Icon(Icons.edit, size: 15, color: Colors.grey),
-                                SizedBox(width: 10),
-                                Icon(Icons.highlight_off,
-                                    size: 15, color: Colors.grey),
-                                SizedBox(width: 10),
-                                Icon(Icons.favorite_border,
-                                    size: 15, color: Colors.pink),
-                              ],
-                            ),
-                          ],
-                        ),
+                      trailing: Text(
+                        servicesList[index].cliques,
+                        style: TextStyle(color: Color.fromARGB(255,102,46,147), fontSize: 20),
                       ),
-                      isThreeLine: true,
                     ),
                   );
                 },

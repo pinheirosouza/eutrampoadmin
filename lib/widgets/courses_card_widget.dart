@@ -27,7 +27,7 @@ class CoursesCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              "Latest Comments on users from Material",
+              "Cursos mais clicados pelos profissionais inscritos em nossa plataforma",
               style: TextStyle(fontSize: 13, color: Colors.grey),
             ),
             SizedBox(height: 20),
@@ -37,24 +37,19 @@ class CoursesCard extends StatelessWidget {
                 itemCount: coursesList.length,
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: const EdgeInsets.only(bottom: 0),
+                    padding: const EdgeInsets.only(bottom: 4),
                     child: ListTile(
                       dense: true,
+
                       leading: Text(coursesList[index].pos),
                       title: Text(
                         coursesList[index].name,
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      subtitle: Padding(
-                        padding: EdgeInsets.only(top: 8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            SizedBox(height: 5),   
-                          ],
-                        ),
+                      trailing: Text(
+                        coursesList[index].cliques,
+                        style: TextStyle(color: Color.fromARGB(255,102,46,147), fontSize: 20),
                       ),
-                      isThreeLine: true,
                     ),
                   );
                 },
